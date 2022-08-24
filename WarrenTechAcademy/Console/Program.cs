@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Console._0_TipoValor;
+using Console._1_TipoReferencia;
 using Console._99_Exercicios;
 
 namespace Console
@@ -20,7 +21,12 @@ namespace Console
             //new _000Cadastro().Exer1();
             //TipoNumerico3.Executa();
             //TipoBooleano.Executa();
-            Enumeradores.Executa();
+            //Enumeradores.Executa();
+            //Enumeradores2.Executa();
+            //Estruturas.Executa();
+            PessoaFisica pessoaFisica = new PessoaFisica(nome: "André", sobrenome: "Martins");
+            pessoaFisica.Saudacao();
+
             System.Console.Read();
 
         }
