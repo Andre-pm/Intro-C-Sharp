@@ -24,9 +24,12 @@ namespace Console
             //Enumeradores.Executa();
             //Enumeradores2.Executa();
             //Estruturas.Executa();
-            PessoaFisica pessoaFisica = new PessoaFisica(nome: "André", sobrenome: "Martins");
-            pessoaFisica.Saudacao();
 
+            //System.Console.WriteLine(pessoaFisica.Saudacao());
+
+            TestaPessoas.ExecutaFisica();
+            TestaPessoas.ExecutaJuridica();
+            
             System.Console.Read();
 
         }

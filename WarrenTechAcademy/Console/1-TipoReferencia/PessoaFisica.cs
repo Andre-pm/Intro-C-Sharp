@@ -8,9 +8,15 @@ namespace Console._1_TipoReferencia
 {
     internal class PessoaFisica : Pessoa
     {
-        public string CPF { get; set; }
-        public PessoaFisica(string nome, string sobrenome) : base(nome, sobrenome)
+        public string Cpf { get; set; }
+        public PessoaFisica(string nome, string sobrenome, string cpf) : base(nome, sobrenome)
         {
+            this.Cpf = cpf;
+        }
+
+        public override string Saudacao()
+        {
+            return $"{ base.Saudacao()} - {this.Cpf}";
         }
     }
 }

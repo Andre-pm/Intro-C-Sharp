@@ -16,10 +16,10 @@ namespace Console._1_TipoReferencia
             this.Nome= nome;
             this.Sobrenome= sobrenome;
         }
-
-        public void Saudacao()
+        virtual
+        public string Saudacao()
         {
-            System.Console.WriteLine($"Olá, {this.Nome} {this.Sobrenome}");
+            return $"Olá, {this.Nome} {this.Sobrenome}";
         }
     }
 }
