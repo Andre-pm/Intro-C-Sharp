@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace Console._1_TipoReferencia
 {
-    internal class BaseRepository : IRepository
+    //Diz que o BaseRepository aceita qualquer tipo, desde que eles herdem de BaseModel
+    internal class BaseRepository<T> : IRepository<T> where T : BaseModel
     {
-        List<Pessoa> pessoas;
+        List<T> pessoas;
 
         public BaseRepository()
         {
-            this.pessoas = new List<Pessoa>();
+            this.pessoas = new List<T>();
         }
-        public string Create(Pessoa p)
+        public string Create(T p)
         {
             this.pessoas.Add(p);
-            return $"Pessoa: {p.Nome} salva com sucesso!";
+            return $"O dado de id: {p.Id} foi salvo com sucesso!";
         }
 
         public string Delete(int id)
@@ -25,14 +26,14 @@ namespace Console._1_TipoReferencia
             return $"Pessoa de id: {id} deletada com sucesso!";
         }
 
-        public List<Pessoa> Read()
+        public List<T> Read()
         {
             return pessoas;
         }
 
-        public string Update(Pessoa p)
+        public string Update(T p)
         {
-            return $"Pessoa: {p.Nome} alterada com sucesso!";
+            return $"O dado de id: {p.Id} foi alterada com sucesso!";
         }
     }
 }

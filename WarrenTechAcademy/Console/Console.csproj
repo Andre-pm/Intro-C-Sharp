@@ -50,6 +50,7 @@
     <Compile Include="0-TipoValor\TipoNumerico.cs" />
     <Compile Include="0-TipoValor\TipoNumerico2.cs" />
     <Compile Include="0-TipoValor\TipoNumerico3.cs" />
+    <Compile Include="1-TipoReferencia\BaseModel.cs" />
     <Compile Include="1-TipoReferencia\BaseRepository.cs" />
     <Compile Include="1-TipoReferencia\IRepository.cs" />
     <Compile Include="1-TipoReferencia\PessoaJuridica.cs" />
@@ -57,6 +58,8 @@
     <Compile Include="1-TipoReferencia\PessoaJuridicaRepository.cs" />
     <Compile Include="1-TipoReferencia\Pessoa.cs" />
     <Compile Include="1-TipoReferencia\PessoaFisica.cs" />
+    <Compile Include="1-TipoReferencia\Produto.cs" />
+    <Compile Include="1-TipoReferencia\ProdutoRepository.cs" />
     <Compile Include="1-TipoReferencia\TestaPessoas.cs" />
     <Compile Include="99-Exercicios\000Cadastro.cs" />
     <Compile Include="BemVindo.cs" />

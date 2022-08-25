@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Console._1_TipoReferencia
 {
-    internal class PessoaJuridicaRepository : BaseRepository<PessoaJuridica>
+    internal class ProdutoRepository : BaseRepository<Produto>
     {
     }
 }

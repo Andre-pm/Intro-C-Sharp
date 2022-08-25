@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Console._1_TipoReferencia
 {
-    internal class PessoaJuridicaRepository : BaseRepository<PessoaJuridica>
+    internal class Produto : BaseModel
     {
+        public string Nome { get; set; }
+        public string Descricao { get; set; }
+
+
+
     }
 }
