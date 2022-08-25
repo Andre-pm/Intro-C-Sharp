@@ -27,8 +27,9 @@ namespace Console
 
             //System.Console.WriteLine(pessoaFisica.Saudacao());
 
-            TestaPessoas.ExecutaFisica();
-            TestaPessoas.ExecutaJuridica();
+            //TestaPessoas.ExecutaFisica();
+            //TestaPessoas.ExecutaJuridica();
+            TestaPessoas.ExecutaPessoa();
             
             System.Console.Read();
 

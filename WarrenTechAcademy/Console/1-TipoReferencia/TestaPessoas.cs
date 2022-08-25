@@ -8,6 +8,30 @@ namespace Console._1_TipoReferencia
 {
     internal class TestaPessoas
     {
+        public static void ExecutaPessoa()
+        {
+            //Criado instâncias de pessoa, pessoa física e pessoa juridíca
+            Pessoa p = new Pessoa("André", "Martins");
+            Pessoa pf = new PessoaFisica("N", "S", "cpf");
+            Pessoa pj = new PessoaJuridica("N", "S", "cnpj");
+            
+            //Para mostrar os dados ocultos das filhas é necessário converter novamente, assim conseguimos acessar os atributos daquela classe e não apenas o da mãe
+            PessoaFisica pf2 = (PessoaFisica)pf;
+            PessoaJuridica pj2 = (PessoaJuridica)pj;
+
+            //Instanciamos a BaseRepository
+            BaseRepository repo = new BaseRepository();
+            //Adicionamos a classe Pessoa, Pessoa física e Jurídica criados 
+            repo.Create(p);
+            repo.Create(pf2);
+            repo.Create(pj2);
+            
+            //Aqui está executando em cada pessoa da lista do repositório o método Saudação
+            foreach (var pessoas in repo.Read())
+            {
+                System.Console.WriteLine(pessoas.Saudacao());
+            }
+        }
         public static void ExecutaFisica()
         {
             PessoaFisica pessoaFisica = new PessoaFisica(nome: "André", sobrenome: "Martins", cpf: "000.000.000-00");
