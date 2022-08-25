@@ -6,32 +6,33 @@ using System.Threading.Tasks;
 
 namespace Console._1_TipoReferencia
 {
-    //Diz que o BaseRepository aceita qualquer tipo, desde que eles herdem de BaseModel
+    //Implementa o IRepository e diz que o BaseRepository aceita qualquer tipo, desde que eles herdem de BaseModel
+    //Isso acontece pois para exibir o Id que é mostrado é necessário que sempre tenha um id na entidade que estou recebendo
     internal class BaseRepository<T> : IRepository<T> where T : BaseModel
     {
-        List<T> pessoas;
+        List<T> entidade;
 
         public BaseRepository()
         {
-            this.pessoas = new List<T>();
+            this.entidade = new List<T>();
         }
-        public string Create(T p)
+        public virtual  string Create(T p)
         {
-            this.pessoas.Add(p);
+            this.entidade.Add(p);
             return $"O dado de id: {p.Id} foi salvo com sucesso!";
         }
 
-        public string Delete(int id)
+        public virtual string Delete(int id)
         {
-            return $"Pessoa de id: {id} deletada com sucesso!";
+            return $"Dado de id: {id} foi deletado com sucesso!";
         }
 
-        public List<T> Read()
+        public virtual List<T> Read()
         {
-            return pessoas;
+            return entidade;
         }
 
-        public string Update(T p)
+        public virtual string Update(T p)
         {
             return $"O dado de id: {p.Id} foi alterada com sucesso!";
         }

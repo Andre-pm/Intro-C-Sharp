@@ -29,8 +29,9 @@ namespace Console
 
             //TestaPessoas.ExecutaFisica();
             //TestaPessoas.ExecutaJuridica();
-            TestaPessoas.ExecutaPessoa();
-            
+            //TestaPessoas.ExecutaPessoa();
+            TestaPessoas.ExecutaAnimal();
+
             System.Console.Read();
 
         }
