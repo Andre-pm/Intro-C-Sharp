@@ -26,6 +26,12 @@ namespace WebAPI.Controllers
         {
             return repo.Create(model);
         }
+
+        [HttpDelete]
+        public string Delete(int id)
+        {
+            return repo.Delete(id);
+        }
     }
 }
 
