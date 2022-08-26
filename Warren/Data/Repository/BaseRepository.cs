@@ -1,4 +1,5 @@
-﻿using Data.Model;
+﻿using Data.Context;
+using Data.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +10,39 @@ namespace Data.Repository
 {
     public class BaseRepository<T> : IRepository<T> where T : BaseModel
     {
-        public string Create(T entity)
+        public virtual List<T> GetAll()
         {
-            return "Criado com sucesso";
+            List<T> list = new List<T>();
+            using (WarrenContext warrenContext = new WarrenContext())
+            {
+                list = warrenContext.Set<T>().ToList();
+            }
+            return list;
         }
 
-        public string Delete(int id)
+        public virtual string Create(T model)
+        {
+            using (WarrenContext warrenContext = new WarrenContext())
+            {
+                warrenContext.Set<T>().Add(model);
+                warrenContext.SaveChanges();
+            }
+            return "Criado";
+        }
+
+        public virtual string Delete(int id)
         {
             return "Deletado com sucesso";
         }
 
-        public List<T> GetAll()
-        {
-            List<T> list = new List<T>();
-            return list;
-        }
 
-        public T GetById(int id)
+        public virtual T GetById(int id)
         {
             T entity = null;
             return entity;
         }
 
-        public string Update(T entity)
+        public virtual string Update(T entity)
         {
             return "Atualizado com sucesso";
         }
