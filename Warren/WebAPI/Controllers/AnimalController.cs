@@ -21,6 +21,12 @@ namespace WebAPI.Controllers
             return repo.GetAll();
         }
 
+        [HttpGet("{id}")]
+        public Animal GetByID(int id)
+        {
+            return repo.GetById(id);
+        }
+
         [HttpPost]
         public string Post(Animal model)
         {
