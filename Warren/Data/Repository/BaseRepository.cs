@@ -39,12 +39,21 @@ namespace Data.Repository
         public virtual T GetById(int id)
         {
             T entity = null;
+            using(WarrenContext warrenContext = new WarrenContext())
+            {
+                entity = warrenContext.Set<T>().Find(id);
+            }
             return entity;
         }
 
         public virtual string Update(T entity)
         {
-            return "Atualizado com sucesso";
+            using(WarrenContext warrenContext = new WarrenContext())
+            {
+                warrenContext.Entry<T>(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                warrenContext.SaveChanges();
+            }
+            return "Alterado com Sucesso";
         }
     }
 }
