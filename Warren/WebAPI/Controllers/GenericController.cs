@@ -7,12 +7,12 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GenericController<T> : ControllerBase where T : BaseModel
+    public class GenericController<T, R> : ControllerBase where T : BaseModel where R : BaseRepository<T>
     {
-        private BaseRepository<T> repo;
-        public GenericController()
+        private R repo;
+        public GenericController(R repo)
         {
-            this.repo = new BaseRepository<T>();
+            this.repo = repo;
         }
 
         [HttpGet]

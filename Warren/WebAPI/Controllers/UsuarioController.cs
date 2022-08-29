@@ -7,9 +7,9 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PlantaController : GenericController<Planta, PlantaRepository>
+    public class UsuarioController : GenericController<Usuario, UsuarioRepository>
     {
-        public PlantaController() : base(new PlantaRepository())
+        public UsuarioController() : base(new UsuarioRepository())
         {
         }
     }

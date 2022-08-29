@@ -7,8 +7,12 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AnimalController : GenericController<Animal>
+    public class AnimalController : GenericController<Animal, AnimalRepository>
     {
+        public AnimalController() : base(new AnimalRepository())
+        {
+            
+        }
     }
 }
 
