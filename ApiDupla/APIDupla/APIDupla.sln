@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIDupla", "APIDupla\APIDupla.csproj", "{C6F75B60-C5C6-4BFC-9C94-A28A145F933C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieAPI", "APIDupla\MovieAPI.csproj", "{C6F75B60-C5C6-4BFC-9C94-A28A145F933C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{392FF53A-490C-4CED-BAE2-4045D5723100}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C6F75B60-C5C6-4BFC-9C94-A28A145F933C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6F75B60-C5C6-4BFC-9C94-A28A145F933C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6F75B60-C5C6-4BFC-9C94-A28A145F933C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{392FF53A-490C-4CED-BAE2-4045D5723100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{392FF53A-490C-4CED-BAE2-4045D5723100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{392FF53A-490C-4CED-BAE2-4045D5723100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{392FF53A-490C-4CED-BAE2-4045D5723100}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
